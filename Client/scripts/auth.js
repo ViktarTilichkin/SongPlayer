@@ -28,19 +28,20 @@
 //     }
 // })
 
-document.querySelector(".login").addEventListener('click', async function () {
-    const Email = document.querySelector(".email").value;
-    const Password = document.querySelector(".pwd").value;
-    const response = await fetch('https://localhost:7037/WeatherForecast', {
+document.querySelector(".btn").addEventListener('click', async function () {
+    const email = document.querySelector(".input-email").value;
+    const pwd = document.querySelector(".input-password").value;
+    const response = await fetch('https://localhost:7163/api/Account/Login', {
         method: 'POST',
         headers: {
             'Authorization': '1234',
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            Email,
-            Password,
+            email,
+            pwd,
         })
     });
     const arr = await response.json();
+    console.log(arr);
 })
