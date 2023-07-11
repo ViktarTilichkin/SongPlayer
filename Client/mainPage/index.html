@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music-player</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="auth"><a href="../auth/upload.html">Sing In</a></div>
+        <div class="reg"><a href="../join/reg.html">Sing Up</a></div>
+    </header>
+    <div class="player">
+        <div class="img"></div>
+        <div class="wrapper">
+
+            <div class="title-flex">
+                <p id="title">Seasons Change</p>
+                <div class="img-spotify"></div>
+            </div>
+
+            <p id="singer">Quasimoto</p>
+
+            <div class="line-time">
+                <div class="line-flex">
+                    <div class="line"></div>
+                </div>
+                <div class="time">00.00</div>
+            </div>
+
+            <div class="panel">
+                <div class="repeat-btn"></div>
+
+                <div class="back"></div>
+                <div class="play-stop"></div>
+                <div class="forward"></div>
+
+                <div class="like"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-popup" id="popup1">
+        <div class="b-popup-content">
+            <div class="closeBtn"> Close</div>
+            <div class="textPopUp"></div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="../scripts/player.js"></script>
+    <script src="../scripts/playlist.js"></script>
+    <script src="../scripts/app.js"></script>
+</body>
+
+</html>

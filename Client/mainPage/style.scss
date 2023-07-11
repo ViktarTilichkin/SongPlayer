@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+}
+
+$color-body: #777777;
+$color-main: #ebe9e1;
+
+body {
+    background-color: $color-body;
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: end;
+    margin-top: 3%;
+
+
+    .auth,
+    .reg {
+        width: 80px;
+        margin: 1%;
+        padding: 1% 0;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid black;
+        background: var(--accent-blue, #699786);
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+.player {
+    width: 540px;
+    height: 169px;
+    margin: auto;
+    margin-top: 10%;
+    background: $color-main;
+    border-radius: 14.7px;
+    display: flex;
+
+    .img {
+        background-image: url(./img/quasimoto.svg);
+        background-repeat: no-repeat;
+        width: 169px;
+        height: 169px;
+        cursor: pointer;
+    }
+
+    .wrapper {
+        .title-flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 10px;
+
+            #title {
+                font-weight: 700;
+                font-size: 18px;
+                color: #000000;
+            }
+
+            .img-spotify {
+                background-image: url(./img/spotifyBtn.svg);
+                background-repeat: no-repeat;
+                width: 21px;
+                height: 21px;
+            }
+        }
+
+        #singer {
+            font-weight: 400;
+            font-size: 14px;
+            color: #454545;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+
+        .line-time {
+            margin-top: 20px;
+            margin-left: 10px;
+            display: flex;
+
+            .line-flex {
+                width: 257px;
+                height: 3px;
+                background: #DADADA;
+                margin-top: 5px;
+                cursor: pointer;
+            }
+
+            .line {
+                width: 0;
+                height: 3px;
+                background: #B45353;
+            }
+
+            .time {
+                font-weight: 400;
+                font-size: 12px;
+                color: #454545;
+                margin-left: 15px;
+            }
+        }
+
+        .panel {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 10px;
+
+            .repeat-btn {
+                background-image: url(./img/repeatBtn.svg);
+                background-repeat: no-repeat;
+                width: 24px;
+                height: 24px;
+                margin-top: 5px;
+            }
+
+            .back {
+                background-image: url(./img/back.svg);
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 10px;
+                margin-top: 12px;
+            }
+
+            .play-stop {
+                background-image: url(./img/playBtn.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 38px;
+                height: 25px;
+            }
+
+            .forward {
+                background-image: url(./img/forward.svg);
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 10px;
+                margin-top: 12px;
+
+            }
+
+            .like {
+                background-image: url(./img/Icon.svg);
+                background-repeat: no-repeat;
+                width: 24px;
+                height: 24px;
+                margin-top: 5px;
+            }
+
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+    }
+}
+
+.b-popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+.b-popup .b-popup-content {
+    margin: 40px auto 0px auto;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    background-color: #c5c5c5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000;
+}
