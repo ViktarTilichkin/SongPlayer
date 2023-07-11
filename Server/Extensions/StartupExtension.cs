@@ -14,8 +14,8 @@ namespace Server.Extensions
 
         public static void AddServices(this IServiceCollection services)
         {
-
-            services.AddTransient<UserService>();
+            services.AddTransient<UsersService>();
+            services.AddTransient<AccountService>();
         }
     }
 }
