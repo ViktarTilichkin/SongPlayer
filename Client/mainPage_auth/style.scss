@@ -175,6 +175,7 @@ header {
     }
 }
 
+
 .b-popup {
     width: 100%;
     min-height: 100%;
@@ -192,4 +193,26 @@ header {
     background-color: #c5c5c5;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #000;
+}
+
+.wrapper-playlist {
+    width: 540px;
+    height: 210px;
+    margin: auto;
+    margin-top: 10%;
+    background: $color-main;
+    border-radius: 14.7px;
+    .head {
+        width: 40px;
+        height: 30px;
+        display: flex;
+    }
+
+    .function {
+        margin: auto;
+        width: 40px;
+        height: 30px;
+        display: flex;
+    }
+
 }
