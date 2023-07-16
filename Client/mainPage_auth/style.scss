@@ -202,17 +202,40 @@ header {
     margin-top: 10%;
     background: $color-main;
     border-radius: 14.7px;
+
+    
     .head {
-        width: 40px;
-        height: 30px;
+        margin: 1%;
+        width: 350px;
+        height: 50px;
         display: flex;
+        div {
+            margin: 2%;
+            width: fit-content;
+            padding: 4% 0;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid black;
+            background: var(--accent-blue, #a3d1c0);
+    
+        }
     }
 
     .function {
-        margin: auto;
-        width: 40px;
-        height: 30px;
+        margin: 1%;
+        width: 350px;
+        height: 50px;
         display: flex;
+    }
+
+    .function div {
+        margin: 2%;
+        width: fit-content;
+        padding: 4% 0;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid black;
+        background: var(--accent-blue, #a3d1c0);
     }
 
 }
