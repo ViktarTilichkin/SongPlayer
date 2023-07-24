@@ -28,6 +28,7 @@
 //     }
 // })
 
+
 document.querySelector(".btn").addEventListener('click', async function () {
     const email = document.querySelector(".input-email").value;
     const pwd = document.querySelector(".input-password").value;
@@ -44,4 +45,6 @@ document.querySelector(".btn").addEventListener('click', async function () {
     });
     const arr = await response.json();
     console.log(arr);
-})
+});
+
+window.location.href = 'file:///C:/Users/Flog/Documents/Hscool/SongPlayer_client/SongPlayer/Client/mainPage_auth/index.html';

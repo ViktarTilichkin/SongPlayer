@@ -137,7 +137,7 @@ header a {
   background-repeat: no-repeat;
   background-size: cover;
   width: 38px;
-  height: 25px;
+  height: 40px;
 }
 .player .wrapper .panel .forward {
   background-image: url(../img/forward.svg);
@@ -182,8 +182,7 @@ header a {
   position: fixed;
   top: 0px;
 }
-
-.b-popup .b-popup-content {
+.b-popup .b-popup .b-popup-content {
   margin: 40px auto 0px auto;
   width: 400px;
   height: auto;
@@ -195,31 +194,59 @@ header a {
 }
 
 .wrapper-playlist {
-  width: 540px;
-  height: 210px;
-  margin: auto;
-  margin-top: 10%;
+  width: 700px;
+  height: 500px;
+  margin: 10% auto 0;
   background: #ebe9e1;
   border-radius: 14.7px;
 }
 .wrapper-playlist .head {
-  margin: 1%;
-  width: 350px;
-  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.wrapper-playlist .head div {
-  margin: 2%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 4% 0;
+.wrapper-playlist .head div:not(:last-child) {
+  color: #3e6858;
+  font: 400 20px "Poppoins";
+}
+.wrapper-playlist .head div:not(:last-child):hover {
+  text-decoration: underline;
+}
+.wrapper-playlist .head div:last-child {
+  width: 150px;
+  margin: 1%;
+  padding: 1% 0;
   text-align: center;
   border-radius: 8px;
   border: 1px solid black;
-  background: var(--accent-blue, #a3d1c0);
+  background: var(--accent-blue, #699786);
+  font: 400 20px "Poppoins";
+}
+.wrapper-playlist .head .input-file {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.wrapper-playlist .head .input-file-label {
+  font: 400 20px "Poppoins";
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-blue, #699786);
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.wrapper-playlist .head .input-file:focus + .input-file-label {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .wrapper-playlist .function {
   margin: 1%;
@@ -229,7 +256,7 @@ header a {
   display: -ms-flexbox;
   display: flex;
 }
-.wrapper-playlist .function div {
+.wrapper-playlist .function div input {
   margin: 2%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -239,4 +266,9 @@ header a {
   border-radius: 8px;
   border: 1px solid black;
   background: var(--accent-blue, #a3d1c0);
+}
+.wrapper-playlist input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }

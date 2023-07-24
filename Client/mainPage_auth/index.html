@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>music-player</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.1.0/jsmediatags.js"></script>
+   
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,26 +57,49 @@
         </div>
     </div>
 
-    <div class = "wrapper-playlist">
-        <div class = "head">
+    <div class="wrapper-playlist">
+        <div class="head">
             <div>Очередь воспроизведения</div>
-            <div>PlayList</div>
+            <div>Плей-листы</div>
+            <label class="input-file-label">
+                Выбрать файлы
+                <input class="input-file" type="file" accept=".mp3" multiple>
+            </label>
+
         </div>
-        <div class = "function">
-            <div> Очистить</div>
-            <div> Добавить В</div>
-            <div> Добавить файл</div>
-        </div>
-        <div class = "list-song">
+        <div class="send">send</div>
+        <div class="list-song">
             List song
+            <input type="file" id="input-file" accept="audio/mpeg">
+            <script>
+                const inputFile = document.getElementById('input-file')
+                inputFile.onchange = function () {
+                    const reader = new FileReader()
+                    reader.onload = function () {
+                        const buffer = this.result
+
+                        // MP3Tag Usage
+                        const mp3tag = new MP3Tag(buffer)
+                        mp3tag.read()
+
+                        // Handle error if there's any
+                        if (mp3tag.error !== '') throw new Error(mp3tag.error)
+                        else console.log(mp3tag.tags)
+                    }
+
+                    if (this.files.length > 0) {
+                        reader.readAsArrayBuffer(this.files[0])
+                    }
+                }
+            </script>
         </div>
         <div></div>
     </div>
-    
+
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script src="../scripts/player.js"></script>
     <script src="../scripts/playlist.js"></script>
     <script src="../scripts/app.js"></script>
+    <script src="../scripts/DataSong.js"></script>
 </body>
 
 </html>
