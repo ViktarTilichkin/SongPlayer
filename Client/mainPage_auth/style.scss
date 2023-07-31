@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
 }
@@ -14,7 +14,6 @@ body {
     width: 700px;
     margin: 0 auto;
 }
-
 
 header {
     display: flex;
@@ -140,7 +139,7 @@ header {
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 38px;
-                height: 25px;
+                height: 40px;
             }
 
             .forward {
@@ -183,36 +182,100 @@ header {
     overflow: hidden;
     position: fixed;
     top: 0px;
-}
 
-.b-popup .b-popup-content {
-    margin: 40px auto 0px auto;
-    width: 400px;
-    height: auto;
-    padding: 10px;
-    background-color: #c5c5c5;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #000;
+
+    .b-popup .b-popup-content {
+        margin: 40px auto 0px auto;
+        width: 400px;
+        height: auto;
+        padding: 10px;
+        background-color: #c5c5c5;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #000;
+    }
 }
 
 .wrapper-playlist {
-    width: 540px;
-    height: 210px;
-    margin: auto;
-    margin-top: 10%;
+    width: 700px;
+    height: 500px;
+    margin: 10% auto 0;
     background: $color-main;
     border-radius: 14.7px;
+
     .head {
-        width: 40px;
-        height: 30px;
         display: flex;
+        padding: 5%;
+        justify-content: space-between;
+        align-items: center;
+
+        div:not(:last-child) {
+            color: #3e6858;
+            font: 400 20px 'Poppoins'
+        }
+
+        div:not(:last-child):hover {
+            text-decoration: underline;
+        }
+
+        div:last-child {
+            width: 150px;
+            margin: 1%;
+            padding: 1% 0;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid black;
+            background: var(--accent-blue, #699786);
+            font: 400 20px 'Poppoins'
+        }
+
+        .input-file {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .input-file-label {
+            font: 400 20px "Poppoins";
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-blue, #699786);
+            color: rgb(0, 0, 0);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .input-file:focus+.input-file-label {
+            outline: none;
+            box-shadow: none;
+        }
     }
 
     .function {
-        margin: auto;
-        width: 40px;
-        height: 30px;
+        margin: 1%;
+        width: 350px;
+        height: 50px;
         display: flex;
     }
 
+    .function div input {
+        margin: 2%;
+        width: fit-content;
+        padding: 4% 0;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid black;
+        background: var(--accent-blue, #a3d1c0);
+    }
+
+    input {
+        appearance: none;
+    }
+
+    .cover {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-position: center;
+        background-size: cover;
+    }
 }

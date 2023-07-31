@@ -48,32 +48,36 @@
         </div>
     </div>
 
-    <div class="b-popup" id="popup1">
+    <!-- <div class="b-popup" id="popup1">
         <div class="b-popup-content">
             <div class="closeBtn"> Close</div>
             <div class="textPopUp"></div>
         </div>
-    </div>
+    </div> -->
 
-    <div class = "wrapper-playlist">
-        <div class = "head">
+    <div class="wrapper-playlist">
+        <div class="head">
             <div>Очередь воспроизведения</div>
-            <div>PlayList</div>
+            <div>Плей-листы</div>
+            <label class="input-file-label">
+                Выбрать файлы
+                <input class="input-file" type="file" accept=".mp3" multiple>
+            </label>
+
         </div>
-        <div class = "function">
-            <div> Clear</div>
-            <div> Add to</div>
-            <div> Add File</div>
-        </div>
-        <div class = "list-song">
+        <div class="send">send</div>
+        <div class="list-song">
             List song
+            <div class="files-editors"></div>
         </div>
+        <div></div>
     </div>
 
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script src="../scripts/player.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script> -->
+    <script src="../scripts/jsmediatags.min.js"></script>
     <script src="../scripts/playlist.js"></script>
     <script src="../scripts/app.js"></script>
+    <script src="../scripts/DataSong.js"></script>
 </body>
 
 </html>

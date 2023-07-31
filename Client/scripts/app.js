@@ -157,34 +157,34 @@ audioTag.onended = function () {
     }
 }
 
-function listSong() {
-    textPopUp.innerHTML =
-        `<ul>
-            <li>${1} ${playlist[0].singer + ' ' + playlist[0].name}</li>
-            <li>${2} ${playlist[1].singer + ' ' + playlist[1].name}</li>
-            <li>${3} ${playlist[2].singer + ' ' + playlist[2].name}</li>
-            <li>${4} ${playlist[3].singer + ' ' + playlist[3].name}</li>
-            <li>${5} ${playlist[4].singer + ' ' + playlist[4].name}</li>
-        </ul>`;
-}
+// function listSong() {
+//     textPopUp.innerHTML =
+//         `<ul>
+//             <li>${1} ${playlist[0].singer + ' ' + playlist[0].name}</li>
+//             <li>${2} ${playlist[1].singer + ' ' + playlist[1].name}</li>
+//             <li>${3} ${playlist[2].singer + ' ' + playlist[2].name}</li>
+//             <li>${4} ${playlist[3].singer + ' ' + playlist[3].name}</li>
+//             <li>${5} ${playlist[4].singer + ' ' + playlist[4].name}</li>
+//         </ul>`;
+// }
 
-imgspotify.addEventListener('click', function () {
-    listSong();
-    PopUpShow();
-    let index = 0;
-    const list = document.querySelector("ul");
-    list.addEventListener('click', (event) => {
-        index = +event.target.textContent[0];
-        player.applySong(player.playListSongs[index - 1]);
-        player.nextSong();
-        audioTag.play();
-        const buttonType = !player.checkPlay ? '../img/pause.svg' : '../img/playBtn.svg';
-        playBtn.style.backgroundImage = `url(${buttonType})`;
-    });
-});
-closeBtn.addEventListener('click', function () {
-    PopUpHide();
-});
+// imgspotify.addEventListener('click', function () {
+//     listSong();
+//     PopUpShow();
+//     let index = 0;
+//     const list = document.querySelector("ul");
+//     list.addEventListener('click', (event) => {
+//         index = +event.target.textContent[0];
+//         player.applySong(player.playListSongs[index - 1]);
+//         player.nextSong();
+//         audioTag.play();
+//         const buttonType = !player.checkPlay ? '../img/pause.svg' : '../img/playBtn.svg';
+//         playBtn.style.backgroundImage = `url(${buttonType})`;
+//     });
+// });
+// closeBtn.addEventListener('click', function () {
+//     PopUpHide();
+// });
 
 
 
@@ -211,12 +211,38 @@ lineTime.addEventListener('click', setProgress);
 
 
 
-$(document).ready(function () {
-    PopUpHide();
-});
-function PopUpShow() {
-    $("#popup1").show();
-}
-function PopUpHide() {
-    $("#popup1").hide();
-}
+// $(document).ready(function () {
+//     PopUpHide();
+// });
+// function PopUpShow() {
+//     $("#popup1").show();
+// }
+// function PopUpHide() {
+//     $("#popup1").hide();
+// }
+
+// const audioTag = document.createElement('audio');
+
+// inputFile.addEventListener(
+//     'change',
+//     async (event) => {
+//         const files = event.target.files;
+
+//         const formData = new FormData();
+//         for (let i = 0; i < files.length; i++) {
+//             formData.append('file', files[i]);
+//         }
+
+//         const response = await fetch('https://localhost:7060/WeatherForecast', {
+//             method: 'POST',
+
+//             body: formData,
+//         });
+//         if (response.ok) {
+//             const result = await response.json();
+//             audioTag.src = `data:audio/mp3;base64,${result}`;
+//             audioTag.play();
+//         }
+//     },
+//     false
+// );
