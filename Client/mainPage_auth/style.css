@@ -272,3 +272,10 @@ header a {
      -moz-appearance: none;
           appearance: none;
 }
+.wrapper-playlist .cover {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}
