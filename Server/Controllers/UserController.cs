@@ -37,6 +37,10 @@ namespace Server.Controllers
             {
                 return BadRequest(ex.Message);
             }
+
+            //Task<int> getByID(int id)
+
+            // return await m_Service.GetById(id)
         }
         [HttpPost("create")]
         public async Task<IActionResult> CreateUser(RegUser user)

@@ -16,6 +16,8 @@ namespace Server.Extensions
         {
             services.AddTransient<UsersService>();
             services.AddTransient<AccountService>();
+            //services.AddTransient<FileService>();
+            //services.AddTransient<PlayerService>();
         }
     }
 }
